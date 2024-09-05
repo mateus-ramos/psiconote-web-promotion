@@ -1,25 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PsicoNote</title>
+    <title>Minha Startup - Aplicativo Inovador</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS -->
 </head>
 <body>
+    <!-- Cabeçalho e Menu de Navegação -->
     <header>
-        <h1>Bem-vindo ao Meu Site!</h1>
+        <div class="container">
+            <div class="logo">
+                <h1>Minha Startup</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#features">Funcionalidades</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <p>Este é um site simples feito com HTML e JavaScript.</p>
-        <button id="clickMe">Clique em mim!</button>
-        <p id="response"></p>
-    </main>
 
-    <script>
-        document.getElementById('clickMe').addEventListener('click', function() {
-            document.getElementById('response').innerText = 'Obrigado por clicar!';
-        });
-    </script>
+    <!-- Banner Principal -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h2>Simplifique sua vida com [Nome do Aplicativo]</h2>
+            <p>Um aplicativo que resolve [problema que o app resolve]. Experimente agora e veja a diferença.</p>
+            <a href="#" class="cta-button">Baixe Agora</a>
+        </div>
+    </section>
 
+    <!-- Seção de Funcionalidades -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2>Principais Funcionalidades</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="icon">💡</i>
+                    <h3>Fácil de Usar</h3>
+                    <p>Nosso aplicativo é intuitivo e fácil de usar para todos os tipos de usuários.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="icon">🔒</i>
+                    <h3>Segurança</h3>
+                    <p>Garantimos que suas informações estarão sempre seguras com criptografia avançada.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="icon">🌍</i>
+                    <h3>Disponível em Várias Plataformas</h3>
+                    <p>Use o aplicativo em qualquer dispositivo, a qualquer hora, de qualquer lugar.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="icon">⚙️</i>
+                    <h3>Suporte 24/7</h3>
+                    <p>Nossa equipe está disponível 24 horas por dia para te ajudar com qualquer problema.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Minha Startup. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
