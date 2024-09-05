@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsicoNote</title>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Meu Site!</h1>
+    </header>
+    <main>
+        <p>Este é um site simples feito com HTML e JavaScript.</p>
+        <button id="clickMe">Clique em mim!</button>
+        <p id="response"></p>
+    </main>
+
+    <script>
+        document.getElementById('clickMe').addEventListener('click', function() {
+            document.getElementById('response').innerText = 'Obrigado por clicar!';
+        });
+    </script>
+
+</body>
+</html>
