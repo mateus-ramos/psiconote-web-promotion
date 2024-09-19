@@ -10,6 +10,8 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     width: 90%;
     max-width: 1400px;
     margin: 0 auto;
@@ -55,7 +57,7 @@ header nav ul li a:hover {
 .hero-section {
     background-color: #4CAF50;
     color: #fff;
-    padding: 100px 0;
+    padding: 120px 0;
     text-align: center;
     background-image: url('banner-image.jpg');
     background-size: cover;
@@ -252,6 +254,10 @@ footer {
         font-size: 20px;
     }
 
+    .screenshot-grid{
+        display: block;
+    }
+
     .cta-button {
         font-size: 18px;
         padding: 15px 30px;
@@ -261,6 +267,11 @@ footer {
 @media (max-width: 768px) {
 
     /* Ajustes para Dispositivos Móveis */
+
+    .container {
+        flex-direction: column;
+    }
+
     header nav ul {
         flex-direction: row;
     }
@@ -271,6 +282,13 @@ footer {
 
     header .logo {
         display: flex;
+        justify-content: center;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
     }
 
     .hero-section h2 {
