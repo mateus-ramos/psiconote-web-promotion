@@ -13,6 +13,7 @@ function closeNavBar() {
 hamburgerMenu.addEventListener("click", openNavBar);
 
 document.addEventListener("click", (event) => {
+  console.log("HERE123");
   const isClickInsideNavBar = navBar.contains(event.target);
   const isClickOnOpenButton = hamburgerMenu.contains(event.target);
 
@@ -55,4 +56,7 @@ window.addEventListener("scroll", () => {
 
 const closeIcon = document.getElementById("close-icon");
 
-closeIcon.addEventListener("click", closeNavBar);
+closeIcon.addEventListener("click", () => {
+  closeNavBar();
+  closeIcon.removeEventListener("click", closeNavBar);
+});
