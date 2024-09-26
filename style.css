@@ -296,7 +296,13 @@ footer span {
   }
   .menu-btn,
   .close-btn {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* vertical-align: bottom; */
+    justify-content: center;
+    height: 100%;
+    align-items: center;
   }
 
   .menu-btn {
