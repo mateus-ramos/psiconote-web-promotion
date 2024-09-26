@@ -3,6 +3,7 @@ const navBar = document.getElementById("navbar");
 // navBar.style.display = "none";
 
 let isNavBarOpen = false;
+let isScrolling = true;
 
 function openNavBar() {
   navBar.classList.add("open");
@@ -22,7 +23,7 @@ hamburgerMenu.addEventListener("click", (event) => {
 });
 
 document.addEventListener("click", (event) => {
-  if (isNavBarOpen) {
+  if (isNavBarOpen && !isScrolling) {
     const isClickInsideNavBar = navBar.contains(event.target);
     const isClickOnOpenButton = hamburgerMenu.contains(event.target);
 
@@ -42,6 +43,9 @@ window.addEventListener("resize", () => {
 });
 
 window.addEventListener("scroll", () => {
+  isScrolling = true;
+
+  clearTimeout(scrollTimeout);
   if (window.scrollY !== 0) {
     header.style.backgroundColor = "rgba(232, 246, 233, 0.4)";
     header.style.backdropFilter = "blur(10px)";
@@ -50,6 +54,10 @@ window.addEventListener("scroll", () => {
     header.style.backgroundColor = "transparent";
     header.style.boxShadow = "unset";
   }
+
+  scrollTimeout = setTimeout(() => {
+    isScrolling = false;
+  }, 100);
 });
 
 // hamburgerMenu.addEventListener("click", () => {
