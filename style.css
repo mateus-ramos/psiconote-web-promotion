@@ -298,10 +298,6 @@ footer span {
   padding-left: 1rem;
 }
 
-.nav-bar.open {
-  left: 0;
-}
-
 @media (max-width: 576px) {
   html {
     font-size: 0.875rem;
